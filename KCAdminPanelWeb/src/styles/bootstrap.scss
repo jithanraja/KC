@@ -1,0 +1,172 @@
+/* purgecss start ignore */
+@import 'theme';
+@import 'functions';
+@import '~bootstrap-scss/_variables.scss';
+@import '~bootstrap-scss/_mixins.scss';
+@import '~bootstrap-scss/_root.scss';
+@import '~bootstrap-scss/_reboot.scss';
+@import '~bootstrap-scss/_type.scss';
+@import '~bootstrap-scss/_images.scss';
+@import '~bootstrap-scss/_code.scss';
+@import '~bootstrap-scss/_grid.scss';
+@import '~bootstrap-scss/_tables.scss';
+@import '~bootstrap-scss/_forms.scss';
+@import '~bootstrap-scss/_buttons.scss';
+@import '~bootstrap-scss/_transitions.scss';
+@import '~bootstrap-scss/_dropdown.scss';
+@import '~bootstrap-scss/_button-group.scss';
+@import '~bootstrap-scss/_input-group.scss';
+@import '~bootstrap-scss/_custom-forms.scss';
+@import '~bootstrap-scss/_nav.scss';
+@import '~bootstrap-scss/_navbar.scss';
+@import '~bootstrap-scss/_card.scss';
+@import '~bootstrap-scss/_breadcrumb.scss';
+@import '~bootstrap-scss/_pagination.scss';
+@import '~bootstrap-scss/_badge.scss';
+@import '~bootstrap-scss/_jumbotron.scss';
+@import '~bootstrap-scss/_alert.scss';
+@import '~bootstrap-scss/_progress.scss';
+@import '~bootstrap-scss/_media.scss';
+@import '~bootstrap-scss/_list-group.scss';
+@import '~bootstrap-scss/_close.scss';
+@import '~bootstrap-scss/_toasts.scss';
+@import '~bootstrap-scss/_modal.scss';
+@import '~bootstrap-scss/_tooltip.scss';
+@import '~bootstrap-scss/_popover.scss';
+// commenting since bootstrap carousel not used
+// @import '~bootstrap-scss/_carousel.scss';
+@import '~bootstrap-scss/_spinners.scss';
+@import '~bootstrap-scss/_print.scss';
+
+// for overwriting spacing for ltr & rtl rendering
+// @import '~bootstrap-scss/_utilities.scss';
+@import '~bootstrap-scss/utilities/align';
+@import '~bootstrap-scss/utilities/background';
+@import '~bootstrap-scss/utilities/borders';
+@import '~bootstrap-scss/utilities/clearfix';
+@import '~bootstrap-scss/utilities/display';
+@import '~bootstrap-scss/utilities/embed';
+@import '~bootstrap-scss/utilities/flex';
+@import '~bootstrap-scss/utilities/float';
+@import '~bootstrap-scss/utilities/overflow';
+@import '~bootstrap-scss/utilities/position';
+@import '~bootstrap-scss/utilities/screenreaders';
+@import '~bootstrap-scss/utilities/shadows';
+@import '~bootstrap-scss/utilities/sizing';
+@import '~bootstrap-scss/utilities/stretched-link';
+// @import "utilities/spacing";
+@import '~bootstrap-scss/utilities/text';
+@import '~bootstrap-scss/utilities/visibility';
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+
+        .#{$abbrev}t#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+
+        .#{$abbrev}b#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$abbrev}r#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+
+        .#{$abbrev}l#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+    .m#{$infix}-auto {
+      margin: auto !important;
+    }
+
+    .mt#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-top: auto !important;
+    }
+
+    .mb#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-bottom: auto !important;
+    }
+  }
+}
+
+[dir='ltr'] {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @each $prop, $abbrev in (margin: m, padding: p) {
+        @each $size, $length in $spacers {
+          .#{$abbrev}r#{$infix}-#{$size},
+          .#{$abbrev}x#{$infix}-#{$size} {
+            #{$prop}-right: $length !important;
+          }
+
+          .#{$abbrev}l#{$infix}-#{$size},
+          .#{$abbrev}x#{$infix}-#{$size} {
+            #{$prop}-left: $length !important;
+          }
+        }
+      }
+
+      .mr#{$infix}-auto,
+      .mx#{$infix}-auto {
+        margin-right: auto !important;
+      }
+
+      .ml#{$infix}-auto,
+      .mx#{$infix}-auto {
+        margin-left: auto !important;
+      }
+    }
+  }
+}
+
+/* overwrite spacing for rtl */
+[dir='rtl'] {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @each $prop, $abbrev in (margin: m, padding: p) {
+        @each $size, $length in $spacers {
+          .#{$abbrev}r#{$infix}-#{$size},
+          .#{$abbrev}x#{$infix}-#{$size} {
+            #{$prop}-left: $length !important;
+          }
+
+          .#{$abbrev}l#{$infix}-#{$size},
+          .#{$abbrev}x#{$infix}-#{$size} {
+            #{$prop}-right: $length !important;
+          }
+        }
+      }
+
+      .mr#{$infix}-auto,
+      .mx#{$infix}-auto {
+        margin-left: auto !important;
+      }
+
+      .ml#{$infix}-auto,
+      .mx#{$infix}-auto {
+        margin-right: auto !important;
+      }
+    }
+  }
+}
+
+/* purgecss end ignore */

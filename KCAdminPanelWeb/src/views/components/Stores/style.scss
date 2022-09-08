@@ -1,0 +1,47 @@
+@import './../../../styles/theme';
+
+.add-button {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    background: #2D8CC0;
+    box-shadow: 0px 4px 4px rgba(55, 95, 176, 0.1), 0px -4px 4px rgba(55, 95, 176, 0.1);
+    border-radius: 15px;
+    border: none;
+    color: #FFF;
+    padding: 10px;
+}
+
+.dropdown-toggle {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    padding: 0;
+
+    &::after {
+       content: none !important; 
+    }
+}
+
+#formik-form {
+    .row > div {
+        margin-bottom: 20px;
+    }
+}
+
+.location-input-container {
+    position: relative;
+
+    .form-control:read-only {
+        background-color: initial;
+    }
+    .map-picker-marker {
+        position: absolute;
+        top: 38px;
+        right: 10px;
+        background: #FFF;
+        padding: 0 5px;
+    }
+}

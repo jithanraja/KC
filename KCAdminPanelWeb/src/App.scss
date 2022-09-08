@@ -1,0 +1,130 @@
+@import './styles/theme';
+
+.navbar {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sidemenu-container {
+    box-shadow: 0px 1px 7px #DEE4EA;
+    padding-top: 10px;
+    height: calc(100vh - 86px);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .side-menu-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none !important;
+        margin: 20px 10px;
+    
+        span {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-top: 6px;
+            color: #6B6060 !important;
+        }
+    
+        img {
+            width: 40px;
+        }
+    }
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2e4965c7;
+    color: #FFFFFF;
+    font-size: 22px;
+    z-index: 99999;
+}
+
+.primary-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $text-primary-color;
+}
+
+.secondary-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $text-secondary-color;
+}
+.file-upload {
+    color: transparent;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    //background: blue;
+    padding: 10px 12px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+}
+.rectangle-bg  {
+    position: relative;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+body > iframe {
+    display: none !important;
+}
+
+.MuiMenuItem-root {
+    font-family: inherit !important;
+}
+
+.MuiTableCell-root {
+    font-family: inherit !important;
+    .badge {
+        font-size: 12px;
+        color: #FFF;
+        padding: 5px 10px;
+        background-color: $badge-primary-bg-color;
+        &.deactivated {
+            background-color: $badge-danger-bg-color;
+        }
+    }
+}
+
+.MuiTableCell-head {
+    font-weight: bolder !important;
+    color: #000 !important;
+    font-size: 16px !important;
+}
+
+
+.status-ordered {
+    background-color: $badge-primary-bg-color !important;
+}
+
+.status-assigned {
+    background-color: $badge-warning-bg-color !important;
+}
+
+.status-declined {
+    background-color: $badge-primary-bg-color !important;
+}
+
+.status-completed {
+    background-color: $badge-success-bg-color !important;
+}

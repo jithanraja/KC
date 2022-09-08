@@ -1,0 +1,11 @@
+.main-content-wrapper {
+    background: #FFF;
+    border-radius: 10px;
+    width: 100%;
+    padding: 40px 20px;
+
+    &.orders-details {
+        padding: 0px;
+        background: #F3EDED;
+    }
+}

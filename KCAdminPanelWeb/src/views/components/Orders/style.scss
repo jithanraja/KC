@@ -1,0 +1,214 @@
+@import './../../../styles/theme';
+
+.add-button {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    background: #2D8CC0;
+    box-shadow: 0px 4px 4px rgba(55, 95, 176, 0.1), 0px -4px 4px rgba(55, 95, 176, 0.1);
+    border-radius: 15px;
+    border: none;
+    color: #FFF;
+    padding: 10px;
+}
+
+.dropdown-toggle {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    padding: 0;
+
+    &::after {
+       content: none !important; 
+    }
+}
+
+.rectangle-bg {
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+.image-label{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 29px;
+    color: #030303;
+    opacity: 0.5;
+}
+
+::-webkit-file-upload-button {
+    display: none;
+}
+
+.orders-container {
+    margin-top: -30px !important;
+    margin-left: -10px !important;
+}
+
+.tab-section {
+    margin: 10px 30px 0;
+}
+
+.MuiTab-root {
+    border-radius: 5px 5px 0px 0px !important;
+    min-width: auto !important;
+    font-family: inherit !important;
+    min-height: 40px !important;
+
+    &[aria-selected=true] {
+        background-color: rgba(196, 196, 196, 0.5) !important;
+        color: rgba(45, 155, 214, 0.7) !important;
+        font-weight: bolder !important;
+    }
+}
+
+.MuiTabs-root .MuiTabs-indicator {
+    background-color: transparent !important;
+}
+
+.order-details {
+    background: #F3EDED;
+
+    .order-details-head {
+        color: #FFF;
+        font-weight: bold;
+
+        .go-to-back {
+            height: 45px;
+            width: 45px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            background: #FFF;
+            margin-left: -32px;
+            color: #000;
+            margin-right: 80px;
+        }
+        .id-badge {
+            background: #7B6060;
+            border-radius: 10px;
+            padding: 5px 15px;
+            font-size: 18px;
+        }
+        .status-badge {
+            font-size: 14px;
+            background: #07169F;
+            border-radius: 6px;
+            padding: 4px 8px;
+            margin-left: 20px;
+        }
+        .order-btn {
+            font-size: 16px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            padding: 20px 30px 15px;
+
+            span {
+                font-size: 30px;
+            }
+            &.items-btn {
+                background: #F21010;
+            }
+            &.qty-btn {
+                background: #440AEB;
+            }
+            &.total-btn {
+                background: #0EE4A4;
+            }
+        }
+    }
+
+    .MuiTableCell-head {
+        color: #756E6E !important;
+    }
+
+    .MuiTableCell-root.MuiTableCell-body {
+        border: none !important;
+    }
+
+    .MuiTableCell-root {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .profile-details-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span:nth-child(2) {
+            color: #888;
+        }
+    }
+
+}
+
+.address-label-color {
+    color: #3125B0;
+}
+
+.address-color {
+    color: #716A6A;
+}
+
+.value-color {
+    color: #2D8CC0;
+}
+
+.modal-open .modal {
+    display: flex !important;
+
+    .order-details-head {
+        font-weight: bold;
+
+        .id-badge {
+            background: #7B6060;
+            border-radius: 10px;
+            padding: 5px 15px;
+            font-size: 18px;
+            color: #FFF;
+        }
+        .status-badge {
+            font-size: 14px;
+            background: #07169F;
+            border-radius: 6px;
+            padding: 4px 8px;
+            margin-left: 20px;
+            color: #FFF;
+        }
+
+        .bg-gray {
+            background: #F3EDED;
+            border: 1px solid #E1CFCF;
+            border-radius: 4px;
+        }
+    }
+    
+    .modal-dialog {
+        min-width: 55%;
+    }
+
+    .model-close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: -15px;
+        top: -15px;
+        background: #2D8CC0;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+}
